@@ -1,13 +1,14 @@
 module.exports = {
 
-	expressApp: '',
+	listen: function(port) {
 
-	listen: function(express, cors, port) {
+		var express = require('express');
+		var cors = require('cors');
 
-		this.expressApp = express();
-		this.expressApp.use(cors());
+		var app = express();
+		app.use(cors());
 
-		this.expressApp.listen(port, function() {
+		app.listen(port, function() {
 			console.log('Listening at REST port ' +port+'.');
 		});
 
