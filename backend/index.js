@@ -22,4 +22,6 @@ client.connect(net, '127.0.0.1',  6000, function() {
     console.log(ret);
   });
 
+}, function(message) {
+  console.log('received message:' + message);
 });
